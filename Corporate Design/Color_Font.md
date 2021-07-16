@@ -2,7 +2,7 @@
 
 Unterhalb ist die Farbpalette angegeben welche im ganzen Projekt angewendet wird.
 
-
+<img src="D:\HTL_D\DIPL\documentation\Corporate Design\Color-Scheme.png" alt="Color-Scheme" style="zoom:50%;" />
 
 # Schriftart (Font)
 
