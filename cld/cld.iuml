@@ -1,0 +1,51 @@
+@startuml
+class Account {
+- id: Int
+}
+class Company {
+- name: String
+- projects: Project[]
+- inventory: Gear[]
+- account: Account
+}
+
+class Project {
+- name: String
+- date: TimeRange
+- vacancies: Vacancy[]
+- gear: Gear[]
+- employee: Person[]
+}
+
+class Gear {
+- datesUsed: TimeRange[]
+- title: String
+}
+
+class Person {
+- name: String
+- account: Account
+}
+class Applicant {
+- person: Person
+}
+class Vacancy {
+- title: String
+- timeRange: TimeRange
+- applicants: Applicant[]
+- deadline: Date
+- status: VacancyStatus
+}
+class TimeRange {
+- startDate: Date
+- endDate: Date
+}
+enum VacancyStatus {
+- open
+- closed
+}
+class Message {
+- source: Account
+- destination: Account
+}
+@enduml
