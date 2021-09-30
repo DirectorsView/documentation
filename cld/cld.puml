@@ -4,8 +4,8 @@ class Account {
 }
 class Company {
 - name: String
-- projects: Project[]
-- inventory: Gear[]
+- projects: List<Project>
+- inventory: List<Gear>
 }
 
 class Project {
@@ -17,8 +17,13 @@ class Project {
 }
 
 class Gear {
-- datesUsed: TimeRange[]
+- datesUsed: List<TimeRange>
 - title: String
+}
+
+class TimeRange {
+- startTime: LocalDate
+- endTime: LocalDate
 }
 
 class Person {
@@ -43,5 +48,7 @@ Company "1" -- "*" Vacancy
 Vacancy "*" -- "*"Person
 Message "*" -- "2" Account
 Project "*" -- "*" Gear
+Project "1" -- "1" TimeRange
+Gear "1" -- "*" TimeRange
 
 @enduml
