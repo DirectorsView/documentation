@@ -6,7 +6,6 @@ class Company {
 - name: String
 - projects: Project[]
 - inventory: Gear[]
-- account: Account
 }
 
 class Project {
@@ -23,29 +22,26 @@ class Gear {
 }
 
 class Person {
-- name: String
-- account: Account
-}
-class Applicant {
-- person: Person
+- firstName: String
+- lastName: String
 }
 class Vacancy {
 - title: String
-- timeRange: TimeRange
 - applicants: Applicant[]
-- deadline: Date
-- status: VacancyStatus
-}
-class TimeRange {
-- startDate: Date
-- endDate: Date
-}
-enum VacancyStatus {
-- open
-- closed
+- deadline: LocalDate
+- opened: Boolean
 }
 class Message {
 - source: Account
 - destination: Account
 }
+
+Account <|-- Company
+Account <|-- Person
+Company "1" -- "*" Project
+Company "1" -- "*" Vacancy
+Vacancy "*" -- "*"Person
+Message "*" -- "2" Account
+Project "*" -- "*" Gear
+
 @enduml
