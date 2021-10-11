@@ -1,12 +1,4 @@
 @startuml
-'https://plantuml.com/use-case-diagram
-skinparam actorStyle awesome
-:User: --> (person)
-:User: --> (company)
-usecase UC1 as "The user can chose between 'person' and 'company'"
-@enduml
-
-@startuml
 skinparam actorStyle awesome
 actor Company as u
 actor Person as u2
