@@ -5,4 +5,18 @@ skinparam actorStyle awesome
 :User: --> (company)
 @enduml
 
-
+'Regardless of the type of the account, the user has a few actions he can take to personalise his account'
+@startuml
+skinparam actorStyle awesome
+package Account as p{
+  usecase "change Name" as uc1
+  usecase "edit Biography" as uc2
+  usecase "edit website" as uc3
+  usecase "delete account" as uc4
+}
+:User: --> p
+p --> uc1
+p --> uc2
+p --> uc3
+p --> uc4
+@enduml
