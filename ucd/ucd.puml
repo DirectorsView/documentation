@@ -1,4 +1,4 @@
-'when creating an account, the user can chose between "person" and "company"'
+'when creating an account, the user can choose between "person" and "company"'
 @startuml
 skinparam actorStyle awesome
 :User: --> (person)
