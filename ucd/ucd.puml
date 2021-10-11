@@ -20,3 +20,18 @@ p --> uc2
 p --> uc3
 p --> uc4
 @enduml
+
+@startuml
+skinparam actorStyle awesome
+package Gear as g{
+  usecase "change name" as uc1
+  usecase "edit image" as uc2
+  usecase "remove gear" as uc3
+  usecase "add gear" as uc4
+}
+:Company: --> g
+g --> uc1
+g --> uc2
+g --> uc3
+g --> uc4
+@enduml
