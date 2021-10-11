@@ -26,6 +26,7 @@ class Gear {
 - id: Long
 - datesUsed: List<LocalDate>
 - title: String
+- image: int
 }
 
 class Person {
