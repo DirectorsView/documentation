@@ -21,11 +21,13 @@ p --> uc3
 p --> uc4
 @enduml
 
+'In this diagram you can see the actions that can be made to the gear of the users company.'
 @startuml
 skinparam actorStyle awesome
 package Gear as g{
   usecase "change name" as uc1
   usecase "edit image" as uc2
+  usecase "edit description" as uc2
   usecase "remove gear" as uc3
   usecase "add gear" as uc4
 }
@@ -34,4 +36,22 @@ g --> uc1
 g --> uc2
 g --> uc3
 g --> uc4
+@enduml
+
+'If a user wants to add some type of gear to his company, he needs to set the name and the image
+and he can also add an optional description'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+package Gear as g{
+  usecase "set name" as uc1
+  usecase "set image" as uc2
+  usecase "add description" as uc3
+}
+:Company: -- (add gear)
+(add gear) --> g
+
+g --> uc1
+g --> uc2
+g -.> uc3
 @enduml
