@@ -13,7 +13,7 @@ When creating an account, the user can choose between "person" and "company".
 
 Regardless of his decision, the user has a few actions he can take to personalise his account
 
-[UseCaseDiagram](img/ucd2.png)
+![UseCaseDiagram](img/ucd2.png)
 
 ##### Company Account
 ###### the following diagrams only apply to company accounts
