@@ -1,44 +1,51 @@
 @startuml
+
 class Account {
-- id: Int
+- id: Long
+- biography: String
+- website: String
 }
+
 class Company {
 - name: String
 - projects: List<Project>
 - inventory: List<Gear>
+- vacancies: List<Vacancy>
 }
 
 class Project {
 - name: String
 - date: TimeRange
-- vacancies: Vacancy[]
-- gear: Gear[]
-- employee: Person[]
+- gear: List<Gear>
+- employee: List<Person>
+- startTime: LocalDate
+- endTime: LocalDate
 }
 
 class Gear {
-- datesUsed: List<TimeRange>
+- id: Long
+- datesUsed: List<LocalDate>
 - title: String
-}
-
-class TimeRange {
-- startTime: LocalDate
-- endTime: LocalDate
 }
 
 class Person {
 - firstName: String
 - lastName: String
 }
+
 class Vacancy {
+- id: Long
 - title: String
-- applicants: Applicant[]
+- applicants: Person[]
 - deadline: LocalDate
 - opened: Boolean
 }
+
 class Message {
+- id: Long
 - source: Account
 - destination: Account
+- content: String
 }
 
 Account <|-- Company
@@ -47,8 +54,8 @@ Company "1" -- "*" Project
 Company "1" -- "*" Vacancy
 Vacancy "*" -- "*"Person
 Message "*" -- "2" Account
-Project "*" -- "*" Gear
-Project "1" -- "1" TimeRange
-Gear "1" -- "*" TimeRange
+Project "0...1" -- "*" Gear
+Gear "*" -- "1" Company
+Project "*" -- "*" Person
 
 @enduml
