@@ -1,3 +1,3 @@
 # Directors View - Use/Case Diagram
 
-![UseCaseDiagram](./ucd_big.png)
+![UseCaseDiagram](img/ucd_big.png)
