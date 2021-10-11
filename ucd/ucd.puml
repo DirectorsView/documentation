@@ -1,11 +1,11 @@
-'when creating an account, the user can choose between "person" and "company"'
+ucd1:'when creating an account, the user can choose between "person" and "company"'
 @startuml
 skinparam actorStyle awesome
 :User: --> (person)
 :User: --> (company)
 @enduml
 
-'Regardless of the type of the account, the user has a few actions he can take to personalise his account'
+ucd2:'Regardless of the type of the account, the user has a few actions he can take to personalise his account'
 @startuml
 skinparam actorStyle awesome
 package Account as p{
@@ -21,7 +21,7 @@ p --> uc3
 p --> uc4
 @enduml
 
-'In this diagram you can see the actions that can be made to the gear of the users company.'
+ucd3:'In this diagram you can see the actions that can be made to the gear of the users company.'
 @startuml
 skinparam actorStyle awesome
 package Gear as g{
@@ -38,7 +38,7 @@ g --> uc3
 g --> uc4
 @enduml
 
-'If a user wants to add some type of gear to his company, he needs to set the name and the image
+ucd4:'If a user wants to add some type of gear to his company, he needs to set the name and the image
 and he can also add an optional description'
 @startuml
 skinparam actorStyle awesome
