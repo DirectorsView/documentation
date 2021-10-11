@@ -22,7 +22,9 @@ package Project as p{
 package Vacancy as v{
   usecase "apply" as uc6
   usecase "remove/accept applicants" as uc7
+  usecase "edit vacancy" as uc8
 }
+
 u --> uc1
 u --> uc2
 u --> uc3
@@ -30,6 +32,7 @@ u --> uc4
 u --> uc5
 u2 --> uc6
 u --> uc7
+u --> uc8
 uc2 --> p
 uc5 --> v
 
