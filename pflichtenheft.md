@@ -33,3 +33,19 @@ Ein weiteres Problem von Filmfirmen ist, dass da oft mehrere Projekte gleichzeit
 Gerät bereits woanders im Einsatz ist. Die daraufhin spontanen oder kurzfristigen Lösungen können sich negativ auf die 
 Produktionsqualität auswirken.
 
+## 4. Aufgabenstellung
+
+### 4.1. Funktionale Anforderungen
+
+#### 4.1.1. Anwendungsfalldiagramm (Use-Case-Diagram)
+
+Dieses Use-Case-Diagramm zeigt einen groben Überblick über alle Aktionen, die ein Benutzer vornehmen kann. Wegen seiner Komplexität und seiner Grobheit sehen Sie unterhalb ein paar detailliertere Versionen. 
+
+Alle anderen UCD finden Sie [hier](https://github.com/DirectorsView/documentation/tree/main/ucd).
+
+![UseCaseDiagram](ucd/img/ucd_big.png)
+
+Bei der Erstellung eines Accounts, kann der Benutzer zwischen einem *Firmenkonto* und einem *Benutzerkonto* wählen
+
+![UseCaseDiagram](ucd/img/ucd1.png)
+
