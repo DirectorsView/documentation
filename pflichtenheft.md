@@ -14,6 +14,9 @@ Autor: Jonas Wiesinger
 
 Medienagenturen, Selbstständige und Hobbyisten im Video- und Fotografie Bereich haben oft Probleme damit, Projekte 
 und die damit verbundenen Aufgaben gesammelt zu verwalten und verlieren schnell den Überblick wer bei welchem Projekt 
-mitwirkt und welches Equipment genutzt wird. Es gibt Plattformen, die speziell für das Suchen von Mitarbeitern konzipiert 
-sind und es gibt Websites, welche für die Organisation von Projekten innerhalb von Firmen gebaut wurden.
+mitwirkt und welches Equipment genutzt wird. 
+
+## 2. Istzustand
+
+Es gibt Plattformen, die speziell für das Suchen von Mitarbeitern konzipiert sind und es gibt Websites, welche für die Organisation von Projekten innerhalb von Firmen gebaut wurden. Auf dem Markt fehlt eine 'allround'-Plattform, welche das Projektmanagement von filmischen Projekten und die Jobbörse verknüpft.
 
