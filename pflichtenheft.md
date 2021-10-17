@@ -1,4 +1,8 @@
-# Pflichtenheft - Directors View
+# Pflichtenheft - DirectorsView
+
+Version: 1.0
+
+Autor: Jonas Wiesinger 
 
 | Projektbezeichnung             | Directors View                         |
 | ------------------------------ | -------------------------------------- |
