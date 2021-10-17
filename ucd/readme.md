@@ -16,6 +16,10 @@ Regardless of his decision, the user has a few actions he can take to personalis
 
 ![UseCaseDiagram](img/ucd2.png)
 
+The user can always search and chat with other accounts
+
+![UseCaseDiagram](img/ucd2-5.png)
+
 #### Company Account
 ###### the following diagrams only apply to company accounts
 
