@@ -57,3 +57,7 @@ Die Oberfläche ist ohne jegliches Vorwissen intuitiv steuerbar bzw. benutzbar. 
 
 Es wird eine funktionierende Webapplikation erstellt, welche mithilfe von einem Quarkus Server und einer PostgreSQL Datenbank es Firmen und Selbständigen ermöglicht einfach und schnell Projekte zu erstellen und zu verwalten. Es können Mitarbeiter einer Firma zugeteilt werden, welche dann von Projektmanagern zu Projekten hinzugefügt werden können. Aber auch Selbstständige Personen können sich für freie Stellen, welche von Firmen ausgeschrieben wurden bewerben und können bei einer akzeptierten Bewerbung zu dem jeweiligen Projekt hinzugefügt werden. Firmen können außerdem das Equipment verwalten, indem verschiedene Ausrüstungsgegenstände Projekten zugeteilt werden und somit nicht mehr für andere zu dem Zeitpunkt verfügbar sind.
 
+## 6. Lieferumfang
+
+Der Benutzer bekommt eine multi-funktionale Plattform, bei der er entweder seine eigene Firma, oder sich selbst als 
+Freelancer verwalten kann. 
