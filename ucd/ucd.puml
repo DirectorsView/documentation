@@ -75,15 +75,17 @@ package Gear as g{
   usecase "add description" as uc3
 }
 :Company: -- (add gear)
+:Company: -- (edit gear)
+:Company: -- (delete gear)
 (add gear) --> g
+(edit gear) --> g
 
 g --> uc1
 g --> uc2
 g -.> uc3
 @enduml
 
-ucd4:'If a user wants to add some type of gear to his company, he needs to set the name and the image
-and he can also add an optional description'
+ucd5:''
 @startuml
 skinparam actorStyle awesome
 left to right direction
