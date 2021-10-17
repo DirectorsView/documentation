@@ -21,6 +21,32 @@ p --> uc3
 p --> uc4
 @enduml
 
+ucd2.5:'The user can always search and chat with other accounts'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+
+package otherAccounts as p{
+  :company2: as a1
+  :company1: as a2
+  :person2: as a3
+  :person1: as a4
+}
+
+usecase "search" as uc1
+usecase "chat" as uc2
+:User: ---> uc1
+:User: ---> uc2
+uc1 ---> p
+uc2 ---> p
+
+p .--> a1
+p .-> a2
+p .-> a3
+p .-> a4
+
+@enduml
+
 ucd3:'In this diagram you can see the actions that can be made to the gear of the users company.'
 @startuml
 skinparam actorStyle awesome
@@ -36,6 +62,24 @@ g --> uc1
 g --> uc2
 g --> uc3
 g --> uc4
+@enduml
+
+ucd4:'If a user wants to add some type of gear to his company, he needs to set the name and the image
+and he can also add an optional description'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+package Gear as g{
+  usecase "set name" as uc1
+  usecase "set image" as uc2
+  usecase "add description" as uc3
+}
+:Company: -- (add gear)
+(add gear) --> g
+
+g --> uc1
+g --> uc2
+g -.> uc3
 @enduml
 
 ucd4:'If a user wants to add some type of gear to his company, he needs to set the name and the image
