@@ -62,3 +62,7 @@ Es wird eine funktionierende Webapplikation erstellt, welche mithilfe von einem 
 Der Benutzer bekommt eine multi-funktionale Plattform, bei der er entweder seine eigene Firma, oder sich selbst als 
 Freelancer verwalten kann. Er hat darüber hinaus Überblick über laufende Projekte, dessen Mitarbeiter und dem Equipment.
 Die Chatfunktion bietet dem Benutzer obendrein eine Plattform zum Networken.
+
+## 7. Projektstrukturplan
+
+![Projektstrukturplan](projektstrukturplan.png)
