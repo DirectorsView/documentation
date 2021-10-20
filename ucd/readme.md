@@ -47,5 +47,8 @@ No matter if the vacancy is for a project or for the company, the user can alway
 ![UseCaseDiagram](img/ucd7.png)
 
 #### Person Account
-###### the following diagrams only apply to user accounts
+###### the following diagram only applies to user accounts
 
+A user can search and apply for vacancies
+
+![UseCaseDiagram](img/ucd8.png)

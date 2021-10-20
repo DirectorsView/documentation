@@ -146,3 +146,22 @@ package Vacancy as v {
 (accept) --> a3
 @enduml
 
+ucd8:'A user can search and apply for vacancies.'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+
+package JobMarket as v {
+    :Vacancy 1: as v1
+    :Vacancy 2: as v2
+    :Vacancy 3: as v3
+}
+
+:company: -- (view)
+:company: -- (apply)
+
+
+(view) --> v1
+(apply) --> v2
+
+@enduml
