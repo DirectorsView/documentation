@@ -1,0 +1,33 @@
+@startuml
+skinparam actorStyle awesome
+actor Company as u
+actor Person as u2
+package Company {
+  usecase "manage equipment" as uc1
+  usecase "manage projects" as uc2
+  usecase "edit account" as uc3
+}
+package Project as p{
+  usecase "edit project" as uc4
+  usecase "add vacancy" as uc5
+}
+package Vacancy as v{
+  usecase "apply" as uc6
+  usecase "remove/accept applicants" as uc7
+  usecase "edit vacancy" as uc8
+}
+
+u --> uc1
+u --> uc2
+u --> uc3
+u --> uc4
+u --> uc5
+u2 --> uc6
+u --> uc7
+u --> uc8
+uc2 --> p
+uc5 --> v
+
+u --> (message)
+u2 --> (message)
+@enduml

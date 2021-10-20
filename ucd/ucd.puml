@@ -1,0 +1,103 @@
+ucd1:'when creating an account, the user can choose between "person" and "company"'
+@startuml
+skinparam actorStyle awesome
+:User: --> (person)
+:User: --> (company)
+@enduml
+
+ucd2:'Regardless of the type of the account, the user has a few actions he can take to personalise his account'
+@startuml
+skinparam actorStyle awesome
+package Account as p{
+  usecase "change Name" as uc1
+  usecase "edit Biography" as uc2
+  usecase "edit website" as uc3
+  usecase "delete account" as uc4
+}
+:User: --> p
+p --> uc1
+p --> uc2
+p --> uc3
+p --> uc4
+@enduml
+
+ucd2.5:'The user can always search and chat with other accounts'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+
+package otherAccounts as p{
+  :company2: as a1
+  :company1: as a2
+  :person2: as a3
+  :person1: as a4
+}
+
+usecase "search" as uc1
+usecase "chat" as uc2
+:User: ---> uc1
+:User: ---> uc2
+uc1 ---> p
+uc2 ---> p
+
+p .--> a1
+p .-> a2
+p .-> a3
+p .-> a4
+
+@enduml
+
+ucd3:'In this diagram you can see the actions that can be made to the gear of the users company.'
+@startuml
+skinparam actorStyle awesome
+package Gear as g{
+  usecase "change name" as uc1
+  usecase "edit image" as uc2
+  usecase "edit description" as uc2
+  usecase "remove gear" as uc3
+  usecase "add gear" as uc4
+}
+:Company: --> g
+g --> uc1
+g --> uc2
+g --> uc3
+g --> uc4
+@enduml
+
+ucd4:'If a user wants to add some type of gear to his company, he needs to set the name and the image
+and he can also add an optional description'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+package Gear as g{
+  usecase "set name" as uc1
+  usecase "set image" as uc2
+  usecase "add description" as uc3
+}
+:Company: -- (add gear)
+:Company: -- (edit gear)
+:Company: -- (delete gear)
+(add gear) --> g
+(edit gear) --> g
+
+g --> uc1
+g --> uc2
+g -.> uc3
+@enduml
+
+ucd5:''
+@startuml
+skinparam actorStyle awesome
+left to right direction
+package Gear as g{
+  usecase "set name" as uc1
+  usecase "set image" as uc2
+  usecase "add description" as uc3
+}
+:Company: -- (add gear)
+(add gear) --> g
+
+g --> uc1
+g --> uc2
+g -.> uc3
+@enduml

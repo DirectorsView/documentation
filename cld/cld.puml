@@ -1,51 +1,63 @@
 @startuml
+
 class Account {
-- id: Int
+- id: Long
+- biography: String
+- website: String
 }
+
 class Company {
 - name: String
-- projects: Project[]
-- inventory: Gear[]
-- account: Account
+- projects: List<Project>
+- inventory: List<Gear>
+- vacancies: List<Vacancy>
 }
 
 class Project {
 - name: String
 - date: TimeRange
-- vacancies: Vacancy[]
-- gear: Gear[]
-- employee: Person[]
+- gear: List<Gear>
+- employee: List<Person>
+- startTime: LocalDate
+- endTime: LocalDate
 }
 
 class Gear {
-- datesUsed: TimeRange[]
+- id: Long
+- datesUsed: List<LocalDate>
 - title: String
+- image: Long
+- description: String
 }
 
 class Person {
-- name: String
-- account: Account
+- firstName: String
+- lastName: String
 }
-class Applicant {
-- person: Person
-}
+
 class Vacancy {
+- id: Long
 - title: String
-- timeRange: TimeRange
-- applicants: Applicant[]
-- deadline: Date
-- status: VacancyStatus
+- applicants: Person[]
+- deadline: LocalDate
+- opened: Boolean
 }
-class TimeRange {
-- startDate: Date
-- endDate: Date
-}
-enum VacancyStatus {
-- open
-- closed
-}
+
 class Message {
+- id: Long
 - source: Account
 - destination: Account
+- content: String
 }
+
+Account <|-- Company
+Account <|-- Person
+Company "1" -- "*" Project
+Company "1" -- "*" Vacancy
+Vacancy "*" -- "*"Person
+Message "*" -- "2" Account
+Project "0...1" -- "*" Gear
+Gear "*" -- "1" Company
+Project "*" -- "*" Person
+
 @enduml
