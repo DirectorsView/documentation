@@ -43,11 +43,11 @@ Dieses Use-Case-Diagramm zeigt einen groben Überblick über alle Aktionen, die 
 
 Alle anderen UCD finden Sie [hier](https://github.com/DirectorsView/documentation/tree/main/ucd).
 
-![UseCaseDiagram](ucd/img/ucd_big.png)
+![UseCaseDiagram](../ucd/img/ucd_big.png)
 
 Bei der Erstellung eines Accounts, kann der Benutzer zwischen einem *Firmenkonto* und einem *Benutzerkonto* wählen
 
-![UseCaseDiagram](ucd/img/ucd1.png)
+![UseCaseDiagram](../ucd/img/ucd1.png)
 
 ### 4.2. Nicht-funktionale Anforderungen
 
