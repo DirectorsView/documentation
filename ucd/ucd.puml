@@ -111,3 +111,17 @@ p .--> uc3
 p .--> uc4
 p .--> uc5
 @enduml
+
+ucd6:'A company can also advertise a job offer for their company.'
+@startuml
+skinparam actorStyle awesome
+
+:company: --> v
+
+package Vacancy as v {
+    (set title)
+    (add deadline)
+    (view applicants)
+    (close Vacancy)
+}
+@enduml

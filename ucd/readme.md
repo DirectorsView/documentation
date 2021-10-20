@@ -37,3 +37,7 @@ The name can later be changed, the time is not changeable. Furthermore they can 
 or add a vacancy for the specific project.
 
 ![UseCaseDiagram](img/ucd5.png)
+
+A company can also advertise a job offer for their company.
+
+![UseCaseDiagram](img/ucd6.png)
