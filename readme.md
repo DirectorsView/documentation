@@ -5,7 +5,7 @@
 
 ### Click Dummy
 
-Der Click Dummy kann <a href="https://app.uizard.io/p/1fe4e335" hier /> ausprobiert werden.
+Der Click Dummy kann <a href="https://app.uizard.io/p/1fe4e335" />hier </a> ausprobiert werden.
 
 
 
