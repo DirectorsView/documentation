@@ -60,4 +60,5 @@ Es wird eine funktionierende Webapplikation erstellt, welche mithilfe von einem 
 ## 6. Lieferumfang
 
 Der Benutzer bekommt eine multi-funktionale Plattform, bei der er entweder seine eigene Firma, oder sich selbst als 
-Freelancer verwalten kann. 
+Freelancer verwalten kann. Er hat darüber hinaus Überblick über laufende Projekte, dessen Mitarbeiter und dem Equipment.
+Die Chatfunktion bietet dem Benutzer obendrein eine Plattform zum Networken.
