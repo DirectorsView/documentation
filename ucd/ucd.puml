@@ -125,3 +125,24 @@ package Vacancy as v {
     (close Vacancy)
 }
 @enduml
+
+ucd7:'No matter if the vacancy is for a project or for the company, the user can always view, remove or delete applicants'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+
+package Vacancy as v {
+    :Applicant 1: as a1
+    :Applicant 2: as a2
+    :Applicant 3: as a3
+}
+
+:company: -- (view)
+:company: -- (remove)
+:company: -- (accept)
+
+(view) --> a1
+(remove) --> a2
+(accept) --> a3
+@enduml
+

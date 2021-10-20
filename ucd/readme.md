@@ -41,3 +41,7 @@ or add a vacancy for the specific project.
 A company can also advertise a job offer for their company.
 
 ![UseCaseDiagram](img/ucd6.png)
+
+No matter if the vacancy is for a project or for the company, the user can always view, remove or delete applicants.
+
+![UseCaseDiagram](img/ucd7.png)
