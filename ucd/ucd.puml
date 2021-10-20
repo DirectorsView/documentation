@@ -85,19 +85,29 @@ g --> uc2
 g -.> uc3
 @enduml
 
-ucd5:''
+ucd5:'When company creates a project, they have to set its name and its time.
+The name can later be changed, the time is not changeable. Furthermore they can add Gear from their inventory, assign their employees,
+or add a vacancy for the specific project.'
 @startuml
 skinparam actorStyle awesome
-left to right direction
-package Gear as g{
-  usecase "set name" as uc1
-  usecase "set image" as uc2
-  usecase "add description" as uc3
-}
-:Company: -- (add gear)
-(add gear) --> g
 
-g --> uc1
-g --> uc2
-g -.> uc3
+package Project as p {
+usecase "set Name" as uc1
+usecase "set Time" as uc2
+usecase "add Gear" as uc3
+usecase "assign Employees" as uc4
+usecase "add Vacancy" as uc5
+}
+
+:Company: --> (create)
+(create) --> p
+
+:Company: --> (edit)
+(edit) --> p
+
+p --> uc1
+p --> uc2
+p .--> uc3
+p .--> uc4
+p .--> uc5
 @enduml

@@ -31,3 +31,9 @@ If a user wants to add some type of gear to his company, he needs to set the nam
 and he can also add an optional description.
 
 ![UseCaseDiagram](img/ucd4.png)
+
+When company creates a project, they have to set its name and its time.
+The name can later be changed, the time is not changeable. Furthermore they can add Gear from their inventory, assign their employees,
+or add a vacancy for the specific project.
+
+![UseCaseDiagram](img/ucd5.png)
