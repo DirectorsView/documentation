@@ -45,3 +45,7 @@ A company can also advertise a job offer for their company.
 No matter if the vacancy is for a project or for the company, the user can always view, remove or delete applicants.
 
 ![UseCaseDiagram](img/ucd7.png)
+
+#### Person Account
+###### the following diagrams only apply to user accounts
+
