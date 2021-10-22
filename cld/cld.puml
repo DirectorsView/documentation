@@ -30,7 +30,6 @@ class Gear {
 - id: Long
 - datesUsed: List<LocalDate>
 - title: String
-- image: Long
 - description: String
 - category: GearCategory
 }
