@@ -9,8 +9,6 @@ Der angepasste Click Dummy kann <a href="https://app.uizard.io/p/1fe4e335" />hie
 
 
 
-
-
 ### Ausgangslage
 
 Firmen und Selbstständige im Filmbereich haben oft Probleme damit, Projekte und die damit verbundenen Aufgaben gesammelt zu verwalten. Es gibt Plattformen für das Suchen von Mitarbeitern und es gibt Apps, welche für die Organisation von Projekten für Firmen gebaut wurden. Wir möchten mit unserem Produkt diese Programme vereinen und so die Planung von Videoprojekten erleichtern.

@@ -2,37 +2,32 @@
 
 class Account {
 - id: Long
-- biography: String
+- password: String
+- email: String
 - website: String
 }
 
 class Company {
 - name: String
+- address: String
 - projects: List<Project>
-- inventory: List<Gear>
 - vacancies: List<Vacancy>
+- employees: List<Person>
 }
 
 class Project {
 - name: String
 - date: TimeRange
-- gear: List<Gear>
-- employee: List<Person>
+- employees: List<Person>
 - startTime: LocalDate
 - endTime: LocalDate
-}
-
-class Gear {
-- id: Long
-- datesUsed: List<LocalDate>
-- title: String
-- image: Long
-- description: String
+- vacancies: List<Vacancy>
 }
 
 class Person {
 - firstName: String
 - lastName: String
+- birthdate: LocalDate
 }
 
 class Vacancy {
@@ -56,8 +51,7 @@ Company "1" -- "*" Project
 Company "1" -- "*" Vacancy
 Vacancy "*" -- "*"Person
 Message "*" -- "2" Account
-Project "0...1" -- "*" Gear
-Gear "*" -- "1" Company
 Project "*" -- "*" Person
-
+Project "1" -- "*" Vacancy
+Person "*" -- "1" Company
 @enduml

@@ -1,6 +1,6 @@
 # Pflichtenheft - DirectorsView
 
-Version: 1.0
+Version: 1.2
 
 Autor: Jonas Wiesinger 
 
@@ -43,11 +43,11 @@ Dieses Use-Case-Diagramm zeigt einen groben Überblick über alle Aktionen, die 
 
 Alle anderen UCD finden Sie [hier](https://github.com/DirectorsView/documentation/tree/main/ucd).
 
-![UseCaseDiagram](ucd/img/ucd_big.png)
+![UseCaseDiagram](../ucd/img/ucd_big.png)
 
 Bei der Erstellung eines Accounts, kann der Benutzer zwischen einem *Firmenkonto* und einem *Benutzerkonto* wählen
 
-![UseCaseDiagram](ucd/img/ucd1.png)
+![UseCaseDiagram](../ucd/img/ucd1.png)
 
 ### 4.2. Nicht-funktionale Anforderungen
 
@@ -60,4 +60,9 @@ Es wird eine funktionierende Webapplikation erstellt, welche mithilfe von einem 
 ## 6. Lieferumfang
 
 Der Benutzer bekommt eine multi-funktionale Plattform, bei der er entweder seine eigene Firma, oder sich selbst als 
-Freelancer verwalten kann. 
+Freelancer verwalten kann. Er hat darüber hinaus Überblick über laufende Projekte, dessen Mitarbeiter und dem Equipment.
+Die Chatfunktion bietet dem Benutzer obendrein eine Plattform zum Networken.
+
+## 7. Projektstrukturplan
+
+![Projektstrukturplan](projektstrukturplan.png)

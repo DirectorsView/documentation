@@ -85,19 +85,83 @@ g --> uc2
 g -.> uc3
 @enduml
 
-ucd5:''
+ucd5:'When company creates a project, they have to set its name and its time.
+The name can later be changed, the time is not changeable. Furthermore they can add Gear from their inventory, assign their employees,
+or add a vacancy for the specific project.'
+@startuml
+skinparam actorStyle awesome
+
+package Project as p {
+usecase "set Name" as uc1
+usecase "set Time" as uc2
+usecase "add Gear" as uc3
+usecase "assign Employees" as uc4
+usecase "add Vacancy" as uc5
+}
+
+:Company: --> (create)
+(create) --> p
+
+:Company: --> (edit)
+(edit) --> p
+
+p --> uc1
+p --> uc2
+p .--> uc3
+p .--> uc4
+p .--> uc5
+@enduml
+
+ucd6:'A company can also advertise a job offer for their company.'
+@startuml
+skinparam actorStyle awesome
+
+:company: --> v
+
+package Vacancy as v {
+    (set title)
+    (add deadline)
+    (view applicants)
+    (close Vacancy)
+}
+@enduml
+
+ucd7:'No matter if the vacancy is for a project or for the company, the user can always view, remove or delete applicants'
 @startuml
 skinparam actorStyle awesome
 left to right direction
-package Gear as g{
-  usecase "set name" as uc1
-  usecase "set image" as uc2
-  usecase "add description" as uc3
-}
-:Company: -- (add gear)
-(add gear) --> g
 
-g --> uc1
-g --> uc2
-g -.> uc3
+package Vacancy as v {
+    :Applicant 1: as a1
+    :Applicant 2: as a2
+    :Applicant 3: as a3
+}
+
+:company: -- (view)
+:company: -- (remove)
+:company: -- (accept)
+
+(view) --> a1
+(remove) --> a2
+(accept) --> a3
+@enduml
+
+ucd8:'A user can search and apply for vacancies.'
+@startuml
+skinparam actorStyle awesome
+left to right direction
+
+package JobMarket as v {
+    :Vacancy 1: as v1
+    :Vacancy 2: as v2
+    :Vacancy 3: as v3
+}
+
+:person: -- (view)
+:person: -- (apply)
+
+
+(view) --> v1
+(apply) --> v2
+
 @enduml
