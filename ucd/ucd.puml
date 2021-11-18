@@ -157,8 +157,8 @@ package JobMarket as v {
     :Vacancy 3: as v3
 }
 
-:company: -- (view)
-:company: -- (apply)
+:person: -- (view)
+:person: -- (apply)
 
 
 (view) --> v1
