@@ -1,6 +1,6 @@
 # Pflichtenheft - DirectorsView
 
-Version: 1.0
+Version: 1.1
 
 Autor: Jonas Wiesinger 
 
