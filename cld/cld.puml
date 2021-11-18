@@ -11,7 +11,6 @@ class Company {
 - name: String
 - address: String
 - projects: List<Project>
-- inventory: List<Gear>
 - vacancies: List<Vacancy>
 - employees: List<Person>
 }
@@ -19,26 +18,10 @@ class Company {
 class Project {
 - name: String
 - date: TimeRange
-- gear: List<Gear>
 - employees: List<Person>
 - startTime: LocalDate
 - endTime: LocalDate
 - vacancies: List<Vacancy>
-}
-
-class Gear {
-- id: Long
-- datesUsed: List<LocalDate>
-- title: String
-- description: String
-- category: GearCategory
-}
-
-enum GearCategory {
-CAMERA
-LIGHT
-LENS
-OTHER
 }
 
 class Person {
@@ -68,10 +51,7 @@ Company "1" -- "*" Project
 Company "1" -- "*" Vacancy
 Vacancy "*" -- "*"Person
 Message "*" -- "2" Account
-Project "0...1" -- "*" Gear
-Gear "*" -- "1" Company
 Project "*" -- "*" Person
 Project "1" -- "*" Vacancy
 Person "*" -- "1" Company
-Gear -- GearCategory
 @enduml
