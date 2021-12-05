@@ -13,6 +13,7 @@ class Company {
 - projects: List<Project>
 - vacancies: List<Vacancy>
 - employees: List<Person>
+- admins: List<Person>
 }
 
 class Project {
