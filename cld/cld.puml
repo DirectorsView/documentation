@@ -10,7 +10,6 @@ class Account {
 class Company {
 - name: String
 - address: String
-- vacancies: List<Vacancy>
 }
 
 class Project {
@@ -20,7 +19,6 @@ class Project {
 - company: Company
 - startTime: LocalDate
 - endTime: LocalDate
-- vacancies: List<Vacancy>
 }
 
 class Person {
@@ -35,6 +33,8 @@ class Vacancy {
 - applicants: Person[]
 - deadline: LocalDate
 - opened: Boolean
+- company: Company
+- project: Project
 }
 
 class Message {
