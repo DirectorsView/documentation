@@ -10,7 +10,6 @@ class Account {
 class Company {
 - name: String
 - address: String
-- projects: List<Project>
 - vacancies: List<Vacancy>
 }
 
@@ -18,6 +17,7 @@ class Project {
 - name: String
 - date: TimeRange
 - employees: List<Employee>
+- company: Company
 - startTime: LocalDate
 - endTime: LocalDate
 - vacancies: List<Vacancy>
