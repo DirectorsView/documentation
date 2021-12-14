@@ -27,6 +27,12 @@ class Person {
 - birthdate: LocalDate
 }
 
+class ProjectMember {
+- id: Long
+- project: Project
+- person: Person
+}
+
 class Vacancy {
 - id: Long
 - title: String
@@ -57,8 +63,9 @@ Company "1" -- "*" Project
 Company "1" -- "*" Vacancy
 Vacancy "*" -- "*"Person
 Message "*" -- "2" Account
-Project "*" -- "*" Person
 Project "1" -- "*" Vacancy
 Employee "*" -- "1" Company
 Person "1" -- "*" Employee
+ProjectMember "*" -- "1" Project
+Person "1" -- "*" ProjectMember
 @enduml
