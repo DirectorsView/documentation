@@ -15,7 +15,6 @@ class Company {
 class Project {
 - name: String
 - date: TimeRange
-- employees: List<Employee>
 - company: Company
 - startTime: LocalDate
 - endTime: LocalDate
@@ -36,7 +35,6 @@ class ProjectMember {
 class Vacancy {
 - id: Long
 - title: String
-- applicants: Person[]
 - deadline: LocalDate
 - opened: Boolean
 - company: Company
@@ -57,11 +55,18 @@ class Employee {
 - isAdmin: Boolean
 }
 
+class Applicant {
+- id: Long
+- vacancy: Vacancy
+- person: Person
+}
+
 Account <|-- Company
 Account <|-- Person
 Company "1" -- "*" Project
 Company "1" -- "*" Vacancy
-Vacancy "*" -- "*"Person
+Applicant "*" -- "1" Vacancy
+Person "1" -- "*" Applicant
 Message "*" -- "2" Account
 Project "1" -- "*" Vacancy
 Employee "*" -- "1" Company
