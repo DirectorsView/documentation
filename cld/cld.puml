@@ -13,8 +13,8 @@ class Company {
 }
 
 class Project {
+- id: Long
 - name: String
-- date: TimeRange
 - company: Company
 - startTime: LocalDate
 - endTime: LocalDate
