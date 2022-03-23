@@ -44,8 +44,9 @@ class Vacancy {
 class Message {
 - id: Long
 - source: Account
-- destination: Account
 - content: String
+- time: LocalDate
+- chat: Chat
 }
 
 class Employee {
@@ -61,16 +62,25 @@ class Applicant {
 - person: Person
 }
 
+class Chat {
+- id: Long
+- account1: Account
+- account2: Account
+- token: String
+}
+
 Account <|-- Company
 Account <|-- Person
 Company "1" -- "*" Project
 Company "1" -- "*" Vacancy
 Applicant "*" -- "1" Vacancy
 Person "1" -- "*" Applicant
-Message "*" -- "2" Account
+Message "*" -- "1" Account
 Project "1" -- "*" Vacancy
 Employee "*" -- "1" Company
 Person "1" -- "*" Employee
 ProjectMember "*" -- "1" Project
 Person "1" -- "*" ProjectMember
+Chat "1" -left- "*" Message
+Chat "*" -- "2" Account
 @enduml
